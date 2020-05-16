@@ -20,27 +20,27 @@ ENDIF ()
 
 
 ADD_EXECUTABLE (lab4_word_count
-        src/count_words_boost.cpp
-        src/count_words_boost.h
+#        src/count_words_boost.cpp
+#        src/count_words_boost.h
         src/main.cpp
-        src/merge.cpp
-        src/merge.h
+#        src/merge.cpp
+#        src/merge.h
         src/read_config.cpp
         src/read_config.h
-        src/my_concurrent_queue.h
-        src/write_result.cpp
-        src/write_result.h
-        #        src/unpack.cpp
-        #        src/unpack.h
-        src/read_by_words.cpp
-        src/read_by_words.h
-        src/merge_all.cpp
-        src/merge_all.h
-        src/is_poisoned.cpp
-        src/is_poisoned.h
-        src/iterate_over_dir.cpp
-        src/iterate_over_dir.h
-        )
+#        src/my_concurrent_queue.h
+#        src/write_result.cpp
+#        src/write_result.h
+#        #        src/unpack.cpp
+#        #        src/unpack.h
+#        src/read_by_words.cpp
+#        src/read_by_words.h
+#        src/merge_all.cpp
+#        src/merge_all.h
+#        src/is_poisoned.cpp
+#        src/is_poisoned.h
+#        src/iterate_over_dir.cpp
+#        src/iterate_over_dir.h
+        src/read_archive.cpp)
 
 TARGET_LINK_LIBRARIES (lab4_word_count ${LibArchive})
 TARGET_LINK_LIBRARIES ( lab4_word_count ${Boost_LIBRARIES})
