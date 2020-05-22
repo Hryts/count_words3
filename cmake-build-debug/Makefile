@@ -39,19 +39,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /snap/clion/112/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /usr/bin/cmake
 
 # The command to remove a file.
-RM = /snap/clion/112/bin/cmake/linux/bin/cmake -E remove -f
+RM = /usr/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/kurlyana/UCU/SEM4/ACS/lab5_word_count3/count_words3
+CMAKE_SOURCE_DIR = /home/hryts/UCU/22/aks/words_count_tbb
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/kurlyana/UCU/SEM4/ACS/lab5_word_count3/count_words3/cmake-build-debug
+CMAKE_BINARY_DIR = /home/hryts/UCU/22/aks/words_count_tbb/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /home/kurlyana/UCU/SEM4/ACS/lab5_word_count3/count_words3/cma
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/snap/clion/112/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/usr/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -69,8 +69,8 @@ rebuild_cache/fast: rebuild_cache
 
 # Special rule for the target edit_cache
 edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/snap/clion/112/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
+	/usr/bin/cmake-gui -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kurlyana/UCU/SEM4/ACS/lab5_word_count3/count_words3/cmake-build-debug/CMakeFiles /home/kurlyana/UCU/SEM4/ACS/lab5_word_count3/count_words3/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hryts/UCU/22/aks/words_count_tbb/cmake-build-debug/CMakeFiles /home/hryts/UCU/22/aks/words_count_tbb/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kurlyana/UCU/SEM4/ACS/lab5_word_count3/count_words3/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hryts/UCU/22/aks/words_count_tbb/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -111,17 +111,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named lab4_word_count
+# Target rules for targets named count_words3
 
 # Build rule for target.
-lab4_word_count: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 lab4_word_count
-.PHONY : lab4_word_count
+count_words3: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 count_words3
+.PHONY : count_words3
 
 # fast build rule for target.
-lab4_word_count/fast:
-	$(MAKE) -f CMakeFiles/lab4_word_count.dir/build.make CMakeFiles/lab4_word_count.dir/build
-.PHONY : lab4_word_count/fast
+count_words3/fast:
+	$(MAKE) -f CMakeFiles/count_words3.dir/build.make CMakeFiles/count_words3.dir/build
+.PHONY : count_words3/fast
 
 src/main.o: src/main.cpp.o
 
@@ -129,7 +129,7 @@ src/main.o: src/main.cpp.o
 
 # target to build an object file
 src/main.cpp.o:
-	$(MAKE) -f CMakeFiles/lab4_word_count.dir/build.make CMakeFiles/lab4_word_count.dir/src/main.cpp.o
+	$(MAKE) -f CMakeFiles/count_words3.dir/build.make CMakeFiles/count_words3.dir/src/main.cpp.o
 .PHONY : src/main.cpp.o
 
 src/main.i: src/main.cpp.i
@@ -138,7 +138,7 @@ src/main.i: src/main.cpp.i
 
 # target to preprocess a source file
 src/main.cpp.i:
-	$(MAKE) -f CMakeFiles/lab4_word_count.dir/build.make CMakeFiles/lab4_word_count.dir/src/main.cpp.i
+	$(MAKE) -f CMakeFiles/count_words3.dir/build.make CMakeFiles/count_words3.dir/src/main.cpp.i
 .PHONY : src/main.cpp.i
 
 src/main.s: src/main.cpp.s
@@ -147,35 +147,8 @@ src/main.s: src/main.cpp.s
 
 # target to generate assembly for a file
 src/main.cpp.s:
-	$(MAKE) -f CMakeFiles/lab4_word_count.dir/build.make CMakeFiles/lab4_word_count.dir/src/main.cpp.s
+	$(MAKE) -f CMakeFiles/count_words3.dir/build.make CMakeFiles/count_words3.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
-
-src/read_archive.o: src/read_archive.cpp.o
-
-.PHONY : src/read_archive.o
-
-# target to build an object file
-src/read_archive.cpp.o:
-	$(MAKE) -f CMakeFiles/lab4_word_count.dir/build.make CMakeFiles/lab4_word_count.dir/src/read_archive.cpp.o
-.PHONY : src/read_archive.cpp.o
-
-src/read_archive.i: src/read_archive.cpp.i
-
-.PHONY : src/read_archive.i
-
-# target to preprocess a source file
-src/read_archive.cpp.i:
-	$(MAKE) -f CMakeFiles/lab4_word_count.dir/build.make CMakeFiles/lab4_word_count.dir/src/read_archive.cpp.i
-.PHONY : src/read_archive.cpp.i
-
-src/read_archive.s: src/read_archive.cpp.s
-
-.PHONY : src/read_archive.s
-
-# target to generate assembly for a file
-src/read_archive.cpp.s:
-	$(MAKE) -f CMakeFiles/lab4_word_count.dir/build.make CMakeFiles/lab4_word_count.dir/src/read_archive.cpp.s
-.PHONY : src/read_archive.cpp.s
 
 src/read_config.o: src/read_config.cpp.o
 
@@ -183,7 +156,7 @@ src/read_config.o: src/read_config.cpp.o
 
 # target to build an object file
 src/read_config.cpp.o:
-	$(MAKE) -f CMakeFiles/lab4_word_count.dir/build.make CMakeFiles/lab4_word_count.dir/src/read_config.cpp.o
+	$(MAKE) -f CMakeFiles/count_words3.dir/build.make CMakeFiles/count_words3.dir/src/read_config.cpp.o
 .PHONY : src/read_config.cpp.o
 
 src/read_config.i: src/read_config.cpp.i
@@ -192,7 +165,7 @@ src/read_config.i: src/read_config.cpp.i
 
 # target to preprocess a source file
 src/read_config.cpp.i:
-	$(MAKE) -f CMakeFiles/lab4_word_count.dir/build.make CMakeFiles/lab4_word_count.dir/src/read_config.cpp.i
+	$(MAKE) -f CMakeFiles/count_words3.dir/build.make CMakeFiles/count_words3.dir/src/read_config.cpp.i
 .PHONY : src/read_config.cpp.i
 
 src/read_config.s: src/read_config.cpp.s
@@ -201,7 +174,7 @@ src/read_config.s: src/read_config.cpp.s
 
 # target to generate assembly for a file
 src/read_config.cpp.s:
-	$(MAKE) -f CMakeFiles/lab4_word_count.dir/build.make CMakeFiles/lab4_word_count.dir/src/read_config.cpp.s
+	$(MAKE) -f CMakeFiles/count_words3.dir/build.make CMakeFiles/count_words3.dir/src/read_config.cpp.s
 .PHONY : src/read_config.cpp.s
 
 # Help Target
@@ -211,14 +184,11 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
+	@echo "... count_words3"
 	@echo "... edit_cache"
-	@echo "... lab4_word_count"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
-	@echo "... src/read_archive.o"
-	@echo "... src/read_archive.i"
-	@echo "... src/read_archive.s"
 	@echo "... src/read_config.o"
 	@echo "... src/read_config.i"
 	@echo "... src/read_config.s"
